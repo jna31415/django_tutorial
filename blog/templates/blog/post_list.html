@@ -16,5 +16,13 @@
       <p>published: 2019:06:28</p>
       <h2><a href="">Khâu ban đầu</a></h2>
       <p>Cái này là gì?</p>
+    </div>
+    {% for post in posts %}
+    <div>
+      <p>published: {{ post.published_date }}</p>
+      <h2><a href="">{{ post.title }}</a></h2>
+      <p>{{ post.text|linebreaksbr }}</p>
+    </div>
+    {% endfor %}
   </body>
 </html>
